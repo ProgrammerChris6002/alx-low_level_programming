@@ -12,5 +12,5 @@ int main(void)
 		putchar(i);
 	putchar('\n');
 
-	return (0);
+	return (0); /* Program ran successfully */
 }
