@@ -1,9 +1,9 @@
 #include <stdio.h>
+
 /**
  * main - This prints alphabets characters
  * Return - This Returns 0
  */
-
 int main(void)
 {
 	int i;
@@ -12,5 +12,5 @@ int main(void)
 		putchar(i);
 	putchar('\n');
 
-	return (0); /* Program ran successfully */
+	return (0);
 }
