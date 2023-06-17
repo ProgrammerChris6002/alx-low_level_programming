@@ -5,27 +5,25 @@
 
 /* betty style doc for function main goes there */
 /**
- * main - This checks the last digit of a number
- * Returns: This will Return 0
+ * main - Prints the last digit of a random number
+ * Return: This Returns 0
  */
-
 int main(void)
 {
-	int n, lastDigit;
+	int n;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
 
-	lastDigit = n % 10;
+	int ld = n % 10;
 
-	if (lastDigit > 5)
-		printf("Last digit of %d is %d and is greater than 5\n", n, lastDigit);
-	else if (lastDigit == 0)
-		printf("Last digit of %d is %d and is 0\n", n, lastDigit);
-	else if ((lastDigit < 6) && (lastDigit != 0))
-		printf("Last digit of %d is %d and is less than 6 and 
-		not 0\n", n, lastDigit);
+	if (ld > 5)
+		printf("Last digit of %d is %d and is greater than 5\n", n, ld);
+	if (ld == 0)
+		printf("Last digit of %d is %d and is 0\n", n, ld);
+	if (ld < 6 && ld != 0)
+		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, ld);
 
 	return (0);
 }
