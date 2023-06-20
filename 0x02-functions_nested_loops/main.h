@@ -29,6 +29,6 @@ int print_last_digit(int);
 void jack_bauer(void);
 
 /* Question 9 */
-void time_table(void);
+void times_table(void);
 
 #endif /* MAIN_H */
