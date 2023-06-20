@@ -18,4 +18,8 @@ int _isalpha(int c);
 /* Question 5 */
 int print_sign(int n);
 
+
+/* Question 6 */
+int _abs(int);
+
 #endif /* MAIN_H */
