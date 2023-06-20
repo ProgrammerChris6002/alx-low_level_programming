@@ -8,7 +8,10 @@
 
 int print_last_digit(int n)
 {
+	lastDig = n % 10;
+
 	printf("%d", lastDig);
 	printf("%d\n" lastDig);
+
 	return(0);
 }
