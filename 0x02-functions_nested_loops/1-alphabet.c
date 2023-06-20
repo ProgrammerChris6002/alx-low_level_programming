@@ -4,7 +4,3 @@
   * main - This prints alphabet characters from print_alphabet() function
   * Return: This Returns 0
   */
-
-int main(void)
-{
-}
