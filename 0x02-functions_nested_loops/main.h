@@ -34,4 +34,7 @@ void times_table(void);
 /* Question 10 */
 int add(int, int);
 
+/* Question 11 */
+void print_to_98(int n);
+
 #endif /* MAIN_H */
