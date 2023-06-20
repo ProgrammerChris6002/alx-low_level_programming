@@ -12,7 +12,6 @@ int _abs(int n)
 	{
 		n = -1 * n;
 	}
-	printf("%d\n", n);
 
-	return (0);
+	return (n);
 }
