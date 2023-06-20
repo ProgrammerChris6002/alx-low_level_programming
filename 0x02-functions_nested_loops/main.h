@@ -28,4 +28,7 @@ int print_last_digit(int);
 /* Question 8 */
 void jack_bauer(void);
 
+/* Question 9 */
+void time_table(void);
+
 #endif /* MAIN_H */
