@@ -22,4 +22,7 @@ int print_sign(int n);
 /* Question 6 */
 int _abs(int);
 
+/* Question 7 */
+int print_last_digit(int);
+
 #endif /* MAIN_H */
