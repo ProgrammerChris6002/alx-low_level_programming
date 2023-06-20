@@ -12,6 +12,4 @@ int print_last_digit(int n)
 
 	printf("%d", lastDig);
 	printf("%d\n", lastDig);
-
-	return(0);
 }
