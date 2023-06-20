@@ -9,4 +9,7 @@ void print_alphabet(void);
 /* Question 2 */
 void print_alphabet_x10(void);
 
+/* Question 3*/
+int _islower(int c);
+
 #endif /* MAIN_H */
