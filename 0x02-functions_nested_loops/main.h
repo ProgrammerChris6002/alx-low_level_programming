@@ -31,4 +31,7 @@ void jack_bauer(void);
 /* Question 9 */
 void times_table(void);
 
+/* Question 10 */
+int add(int, int);
+
 #endif /* MAIN_H */
