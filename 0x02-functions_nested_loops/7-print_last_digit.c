@@ -9,6 +9,7 @@
 int print_last_digit(int n)
 {
 	int lastDig = n % 10;
+	int result = (lastDig * 10) + lastDig
 
-	return (lastDig);
+	return (result);
 }
