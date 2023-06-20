@@ -15,4 +15,7 @@ int _islower(int c);
 /* Question 4 */
 int _isalpha(int c);
 
+/* Question 5 */
+int print_sign(int n);
+
 #endif /* MAIN_H */
