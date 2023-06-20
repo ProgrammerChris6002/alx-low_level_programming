@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include "main.h"
 /**
-  * _islower - Checks if a character is an alphabet or not
+  * _isalpha - Checks if a character is an alphabet or not
   * @c: Parameter helps check the charater
   * Return: This Returns 0 or 1
   */
 
-int _islower(int c)
+int _isalpha(int c)
 {
 	int i = 0;
 
