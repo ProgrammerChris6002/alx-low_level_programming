@@ -25,4 +25,7 @@ int _abs(int);
 /* Question 7 */
 int print_last_digit(int);
 
+/* Question 8 */
+void jack_bauer(void);
+
 #endif /* MAIN_H */
