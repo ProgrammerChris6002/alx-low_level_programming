@@ -11,5 +11,8 @@ int print_last_digit(int n)
 	int lastDig = n % 10;
 
 	printf("%d", lastDig);
-	printf("%d\n", lastDig);
+	printf("%d", lastDig);
+	printf("\n");
+
+	return (0);
 }
