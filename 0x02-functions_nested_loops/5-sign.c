@@ -14,4 +14,6 @@ int print_sign(int n)
 		return (0);
 	else if (n < 1)
 		return (-1);
+
+	return (0);
 }
