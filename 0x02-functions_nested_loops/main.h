@@ -37,4 +37,7 @@ int add(int, int);
 /* Question 11 */
 void print_to_98(int n);
 
+/* Question 12 */
+void print_times_table(int n);
+
 #endif /* MAIN_H */
