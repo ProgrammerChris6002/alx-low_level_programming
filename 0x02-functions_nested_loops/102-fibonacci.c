@@ -7,19 +7,18 @@
 
 int main(void)
 {
-	int i = 2, n1 = 1, n2 = 2;
+	int i, n1 = 1, n2 = 2;
 	unsigned long next;
 
 	printf("%d, %d, ", n1, n2);
-	while (i < 50)
+	for (i = 2; i <= 50; i++)
 	{
 		next = n1 + n2;
 		printf("%lu", next);
-		if (i != 49)
+		if (i != 50)
 			printf(", ");
 		n1 = n2;
 		n2 = next;
-		i++;
 	}
 	printf("\n");
 
