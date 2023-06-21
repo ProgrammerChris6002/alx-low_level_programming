@@ -21,8 +21,8 @@ void times_table(void)
 				else
 					printf(", ");
 			}
-			printf("\n");
 
 		}
+		printf("\n");
 	}
 }
