@@ -14,7 +14,9 @@ int main(void)
 	while (i < 50)
 	{
 		next = n1 + n2;
-		printf("%ld, ", next);
+		printf("%ld", next);
+		if (i != 49)
+			printf(", ");
 		n1 = n2;
 		n2 = next;
 		i++;
