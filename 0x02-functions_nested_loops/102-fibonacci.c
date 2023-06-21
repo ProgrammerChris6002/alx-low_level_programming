@@ -8,7 +8,7 @@
 int main(void)
 {
 	int i = 2, n1 = 1, n2 = 2;
-	unsigned long int next;
+	unsigned long next;
 
 	printf("%d, %d, ", n1, n2);
 	while (i < 50)
