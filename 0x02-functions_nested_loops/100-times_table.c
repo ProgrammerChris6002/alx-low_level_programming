@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include "main.h"
 /**
-  * times_table - This print the 9 tmes table
+  * print_times_table - This print the times table up to n
+  * @n: Upper limit of times table
   */
 
 void print_times_table(int n)
