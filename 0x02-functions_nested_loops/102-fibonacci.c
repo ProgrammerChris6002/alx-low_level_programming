@@ -11,7 +11,7 @@ int main(void)
 	unsigned long next;
 
 	printf("%d, %d, ", n1, n2);
-	for (i = 2; i <= 50; i++)
+	for (i = 2; i < 50; i++)
 	{
 		next = n1 + n2;
 		printf("%lu", next);
