@@ -8,13 +8,13 @@
 int main(void)
 {
 	int i = 2, n1 = 1, n2 = 2;
-	long int next;
+	unsigned long long int next;
 
 	printf("%d, %d, ", n1, n2);
 	while (i < 50)
 	{
 		next = n1 + n2;
-		printf("%ld", next);
+		printf("%llu", next);
 		if (i != 49)
 			printf(", ");
 		n1 = n2;
