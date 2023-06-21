@@ -21,11 +21,8 @@ void times_table(void)
 				else
 					printf(", ");
 			}
+			printf("\n");
 
 		}
-		if (j != 9 || i != 9)
-			printf("\n");
 	}
-
-	printf("\n");
 }
