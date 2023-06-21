@@ -5,7 +5,7 @@
   * Return: This Returns 0
   */
 
-int main(void)
+long int main(void)
 {
 	int i, n1 = 1, n2 = 2;
 	unsigned long next;
