@@ -20,7 +20,7 @@ int main(void)
 	for (i = num - 1; i >= 2; i--)
 		if (is_prime(i) == 1 && num % i == 0)
 		{
-			printf("%lu", i);
+			printf("%lu\n", i);
 			break;
 		}
 
