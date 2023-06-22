@@ -13,4 +13,7 @@ int mul(int a, int b);
 /* Task 3 */
 void print_numbers(void);
 
+/* Task 4 */
+void print_most_numbers(void);
+
 #endif /* MAIN_H */
