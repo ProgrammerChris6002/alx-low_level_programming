@@ -4,4 +4,7 @@
 /* Task 0 */
 int _isupper(int c);
 
+/* Task 1 */
+int _isdigit(int c);
+
 #endif
