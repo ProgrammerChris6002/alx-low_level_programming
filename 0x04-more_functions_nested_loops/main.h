@@ -29,4 +29,7 @@ void print_line(int n);
 /* Task 7 */
 void print_diagonal(int n);
 
+/* Task 8 */
+void print_square(int size);
+
 #endif /* MAIN_H */
