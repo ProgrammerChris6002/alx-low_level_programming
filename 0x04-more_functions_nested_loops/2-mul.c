@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-  * _mul - Multiplies 2 integers
+  * mul - Multiplies 2 integers
   * @a: First integer
   * @b: Second integer
   * Return: Returns 1 if True, 0 otherwise
