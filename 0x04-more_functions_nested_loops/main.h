@@ -26,4 +26,7 @@ void more_numbers(void);
 /* Task 6 */
 void print_line(int n);
 
+/* Task 7 */
+void print_diagonal(int n);
+
 #endif /* MAIN_H */
