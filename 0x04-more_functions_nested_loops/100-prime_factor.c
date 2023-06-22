@@ -5,9 +5,9 @@
   * Return: Returns 1 if True, 0 otherwise
   */
 
-int is_prime(unsigned long long int num)
+int is_prime(unsigned long int num)
 {
-	unsigned long long int i;
+	unsigned long int i;
 
 	for (i = num - 1; i >= 2; i--)
 		if (num % i == 0)
@@ -23,12 +23,12 @@ int is_prime(unsigned long long int num)
 
 int main(void)
 {
-	unsigned long long int num = 612852475143, i;
+	unsigned long int num = 612852475143, i;
 
 	for (i = num - 1; i >= 2; i--)
 		if (is_prime(i) == 1 && num % i == 0)
 		{
-			printf("%llu\n", i);
+			printf("%lu\n", i);
 			break;
 		}
 
