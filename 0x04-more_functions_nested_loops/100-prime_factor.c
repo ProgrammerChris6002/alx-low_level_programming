@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 /**
   * is_prime - Checks if a number is prime
@@ -34,7 +35,7 @@ int is_prime(unsigned long int num)
 	if (num < 2)
 		return (0);
 
-	for (i = 2; i < num; i++)
+	for (i = 2; i <= sqrt(num); i++)
 		if (num % i == 0)
 			return (0);
 
