@@ -1,6 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+int _putchar(char c);
+
 /* Task 0 */
 int _isupper(int c);
 
@@ -18,5 +20,8 @@ void print_most_numbers(void);
 
 /* Task 5 */
 void more_numbers(void);
+
+/* Task 6 */
+void print_line(int n);
 
 #endif /* MAIN_H */
