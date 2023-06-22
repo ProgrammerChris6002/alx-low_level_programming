@@ -5,4 +5,7 @@
 
 void positive_or_negative(int i);
 
+/* Task 2 */
+int largest_number(int a, int b, int c);
+
 #endif /* MAIN_H */
