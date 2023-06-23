@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 /**
   * _abs - Prints the absolute value of a number

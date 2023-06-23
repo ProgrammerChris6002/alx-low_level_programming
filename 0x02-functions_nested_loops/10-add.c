@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 /**
   * add - This adds two integers

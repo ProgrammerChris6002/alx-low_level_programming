@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 /**
   * _islower - Checks if an alphabet is lower case or not

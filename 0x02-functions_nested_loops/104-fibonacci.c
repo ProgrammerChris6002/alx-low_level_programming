@@ -31,7 +31,7 @@ int main(void)
 			n1 = n2, n2 = hold2;
 			printf("%lu", n2);
 		}
-		if (i != 50)
+		if (i != 98)
 		{
 			printf(", ");
 		}

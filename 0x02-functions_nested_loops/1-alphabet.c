@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 /**
   * print_alphabet - This prints lowercase alphabet characters(a-z)

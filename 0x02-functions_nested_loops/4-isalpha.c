@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 /**
   * _isalpha - Checks if a character is an alphabet or not

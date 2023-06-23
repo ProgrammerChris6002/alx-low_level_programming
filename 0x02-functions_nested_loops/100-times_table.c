@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 /**
   * print_times_table - This print the times table up to n

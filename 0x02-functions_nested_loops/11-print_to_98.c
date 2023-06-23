@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 /**
   * print_to_98 - This prints all numbers from n to 98
