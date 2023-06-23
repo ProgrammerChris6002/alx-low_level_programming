@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	unsigned long int n1 = 1, n2 = 2, next1, n11, n22, next2;
+	unsigned long int n1 = 1, n2 = 2, next1;
 	int i;
 
 	printf("%lu, %lu, ", n1, n2);
