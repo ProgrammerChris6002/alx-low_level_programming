@@ -13,14 +13,14 @@ int main(void)
 	int i;
 
 	printf("%lu, %lu, ", n1, n2);
-	for (i = 2; i < 100; i++)
+	for (i = 2; i < 98; i++)
 	{
-		if (i <= 100)
+		if (i <= 98)
 		{
 			next1 = n1 + n2;
 			n1 = n2, n2 = next1;
 			printf("%lu", n2);
-			if (i < 99)
+			if (i < 97)
 				printf(", ");
 		}
 	}
