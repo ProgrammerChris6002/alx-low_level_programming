@@ -1,11 +1,5 @@
 #include <stdio.h>
 
-/**
-  * is_prime - Checks if a number is prime
-  * @num: Number to check
-  * Return: Returns 1 if True, 0 otherwise
-  */
-
 int is_prime(unsigned long int num);
 
 /**
@@ -28,6 +22,12 @@ int main(void)
 
 	return (0);
 }
+
+/**
+  * is_prime - Checks if a number is prime
+  * @num: Number to check
+  * Return: Returns 1 if True, 0 otherwise
+  */
 
 int is_prime(unsigned long int num)
 {
