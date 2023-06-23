@@ -10,6 +10,6 @@ int print_last_digit(int n)
 {
 	int lastDig = n % 10;
 
-	putchar(lastDig + '0');
+	printf("%d", last_digit);
 	return (lastDig);
 }
