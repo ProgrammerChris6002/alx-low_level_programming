@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define LARGEST 1000000000
+#define LARGEST 10000000000
 
 /**
   * main - This prints the first 100 numbers of the Fibonacci Series starting
