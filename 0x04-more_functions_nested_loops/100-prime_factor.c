@@ -10,7 +10,8 @@ int is_prime(unsigned long int num);
 
 int main(void)
 {
-	unsigned long int num = 612852475143, i;
+	unsigned long int num = 612852475143;
+	unsigned long int i;
 
 	for (i = num - 1; i >= 2; i--)
 	{
