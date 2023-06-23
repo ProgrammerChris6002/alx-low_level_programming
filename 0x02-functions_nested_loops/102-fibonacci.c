@@ -9,31 +9,19 @@
 
 int main(void)
 {
-	unsigned long int n1 = 1, n2 = 2, cover1 = 0, cover2 = 0;
-	unsigned long int hold1, hold2, hold3;
+	unsigned long int n1 = 1, n2 = 2, next1, n11, n22, next2;
 	int i;
 
 	printf("%lu, %lu, ", n1, n2);
 	for (i = 2; i < 50; i++)
 	{
-		if (n1 + n2 > LARGEST || cover2 > 0 || cover1 > 0)
+		if (i <= 50)
 		{
-			hold1 = (n1 + n2) / LARGEST;
-			hold2 = (n1 + n2) % LARGEST;
-			hold3 = n1 + n2 + hold1;
-			n1 = n2, n2 = hold3;
-			n1 = n2, n2 = hold2;
-			printf("1%010lu", n2);
-		}
-		else
-		{
-			hold2 = n1 + n2;
-			n1 = n2, n2 = hold2;
+			next1 = n1 + n2;
+			n1 = n2, n2 = next1;
 			printf("%lu", n2);
-		}
-		if (i != 50)
-		{
-			printf(", ");
+			if (i < 49)
+				printf(", ");
 		}
 	}
 	printf("\n");
