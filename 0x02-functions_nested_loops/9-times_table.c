@@ -12,10 +12,26 @@ void times_table(void)
 		for (j = 0; j <= 9; j++)
 		{
 			product = i * j;
-			printf("%-2d", product);
-			if (j != 9)
-				printf(" ");
+			if (j == 0)
+			{
+				_putchar(k + '0');
+			}
+
+			if (product < 10 && j != 0)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(k + '0');
+			}
+			else if (k >= 10)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar((k / 10) + '0');
+				_putchar((k % 10) + '0');
+			}
 		}
-		printf("\n");
+		_putchar('\n');
 	}
 }
