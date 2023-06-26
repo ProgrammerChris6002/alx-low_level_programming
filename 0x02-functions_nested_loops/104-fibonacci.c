@@ -9,17 +9,27 @@
 
 int main(void)
 {
-	unsigned long int n1 = 1, n2 = 2, next1;
+	unsigned long int n1 = 1, n2 = 2, next1, n11, n22, next2;
 	int i;
 
 	printf("%lu, %lu, ", n1, n2);
 	for (i = 2; i < 98; i++)
 	{
-		if (i <= 98)
+		if (i <= 90)
 		{
 			next1 = n1 + n2;
 			n1 = n2, n2 = next1;
 			printf("%lu", n2);
+			if (i < 97)
+				printf(", ");
+		}
+		else if (i > 90)
+		{
+			n11 = n1, n22 = n2;
+			next2 = n11 + n22;
+			n11 = n22, n22 = next2;
+			n1 = n11, n2 = n22;
+			printf("%lu", n22);
 			if (i < 97)
 				printf(", ");
 		}
