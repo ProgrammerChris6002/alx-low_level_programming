@@ -1,11 +1,17 @@
 #include <stdio.h>
 
 /**
-  * _put - prints a string
+  * _puts - prints a string
   * @str: string to be printed
   */
 
 void _puts(char *str)
 {
-	putchar();
+	int len; = 0
+
+	while (str[len] != '\0')
+	{
+		putchar(str[len]);
+	}
+	putchar('\n');
 }
