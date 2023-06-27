@@ -19,4 +19,5 @@ void rev_string(char *s)
 		len2++;
 		len--;
 	}
+	s[len2] = '\0';
 }
