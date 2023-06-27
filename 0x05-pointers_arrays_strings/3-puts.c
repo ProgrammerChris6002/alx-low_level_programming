@@ -12,6 +12,7 @@ void _puts(char *str)
 	while (str[len] != '\0')
 	{
 		putchar(str[len]);
+		len++;
 	}
 	putchar('\n');
 }
