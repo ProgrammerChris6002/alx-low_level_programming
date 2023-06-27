@@ -17,10 +17,10 @@ void rev_string(char *s)
 	_putchar(10);
 
 	len--;
-	while (len >= 0)
-	{
-		_putchar(s[len]);
-		len--;
-	}
-	_putchar(10);
+	//while (len >= 0)
+	//{
+	//	_putchar(s[len]);
+	//	len--;
+	//}
+	//_putchar(10);
 }
