@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
   * _strcpy - Copies a string to a buffer
@@ -12,7 +12,7 @@ char *_strcpy(char *dest, char *src)
 	char *destp;
 
 	*dest = *src;
-	destp = *dest;
+	destp = &dest;
 
 	return (destp);
 }
