@@ -12,19 +12,14 @@ int main(void)
 {
 	unsigned long int num = 612852475143;
 	unsigned long int i;
-	/* unsigned long int largest; */
 
 	while (num % 2 == 0)
 		num /= 2;
 
-	for (i = sqrt(num); i >= 3; i -= 2)
-	{
-		if (is_prime(i) == 1 && num % i == 0)
-		{
-			printf("%lu\n", i);
-			break;
-		}
-	}
+	for (i = 3; i <= sqrt(num); i += 2)
+		while (num % i == 0)
+			num /= i;
+	printf("%lu\n", num);
 
 	return (0);
 }
