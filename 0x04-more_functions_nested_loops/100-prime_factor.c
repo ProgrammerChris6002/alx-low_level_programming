@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <math.h>
+#include "main.h"
 
 int is_prime(unsigned long int num);
 
@@ -17,10 +16,11 @@ int main(void)
 	{
 		if (is_prime(i) == 1 && num % i == 0)
 		{
-			printf("%lu\n", i);
+			_putchar(i + '0');
 			break;
 		}
 	}
+	_putchar('\n');
 
 	return (0);
 }
@@ -38,7 +38,7 @@ int is_prime(unsigned long int num)
 	if (num < 2)
 		return (0);
 
-	for (i = 2; i <= sqrt(num); i++)
+	for (i = 2; i < num; i++)
 		if (num % i == 0)
 			return (0);
 
