@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <math.h>
 #include "main.h"
 
@@ -13,7 +12,7 @@ int main(void)
 {
 	unsigned long int num = 612852475143;
 	unsigned long int i;
-	unsigned long int largest;
+	/* unsigned long int largest; */
 
 	while (num % 2 == 0)
 		num /= 2;
