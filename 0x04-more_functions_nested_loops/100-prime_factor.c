@@ -13,8 +13,12 @@ int main(void)
 {
 	unsigned long int num = 612852475143;
 	unsigned long int i;
+	unsigned long int largest;
 
-	for (i = num - 1; i >= 3; i -= 2)
+	while (num % 2 == 0)
+		num /= 2;
+
+	for (i = sqrt(num); i >= 3; i -= 2)
 	{
 		if (is_prime(i) == 1 && num % i == 0)
 		{
