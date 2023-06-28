@@ -11,9 +11,6 @@ int main(void)
 	unsigned long int num = 612852475143;
 	unsigned long int i;
 
-	while (num % 2 == 0)
-		num /= 2;
-
 	for (i = 3; i <= sqrt(num); i += 2)
 		while (num % i == 0)
 			num /= i;
