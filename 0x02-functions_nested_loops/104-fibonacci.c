@@ -1,5 +1,4 @@
 #include <stdio.h>
-#define LARGEST 10000000000
 
 /**
   * main - This prints the first 100 numbers of the Fibonacci Series starting
@@ -9,32 +8,34 @@
 
 int main(void)
 {
-	unsigned long int n1 = 1, n2 = 2, next1, n11, n22, next2;
-	int i;
+	unsigned long int i;
+	unsigned long int bef = 1;
+	unsigned long int aft = 2;
+	unsigned long int I = 1000000000;
+	unsigned long int bef1;
+	unsigned long int bef2;
+	unsigned long int aft1;
+	unsigned long int aft2;
 
-	printf("%lu, %lu, ", n1, n2);
-	for (i = 2; i < 98; i++)
+	printf("%lu", bef);
+	for (i = 1; i < 91; i++)
 	{
-		if (i <= 90)
-		{
-			next1 = n1 + n2;
-			n1 = n2, n2 = next1;
-			printf("%lu", n2);
-			if (i < 97)
-				printf(", ");
-		}
-		else if (i > 90)
-		{
-			n11 = n1, n22 = n2;
-			next2 = n11 + n22;
-			n11 = n22, n22 = next2;
-			n1 = n11, n2 = n22;
-			printf("%lu", n22);
-			if (i < 97)
-				printf(", ");
-		}
+		printf(", %lu", aft);
+		aft += bef;
+		bef = aft - bef;
+	}
+	bef1 = (bef / I);
+	bef2 = (bef % I);
+	aft1 = (aft / I);
+	aft2 = (aft % I);
+	for (i = 92; i <= 98; i++)
+	{
+		printf(", %lu%lu", aft1 + (aft2 / I), aft2 % I);
+		aft1 = aft1 + bef1;
+		bef1 = aft1 - bef1;
+		aft2 = aft2 + bef2;
+		bef2 = aft2 - bef2;
 	}
 	printf("\n");
-
 	return (0);
 }
