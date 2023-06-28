@@ -16,11 +16,10 @@ int main(void)
 	{
 		if (is_prime(i) == 1 && num % i == 0)
 		{
-			_putchar(i + '0');
+			printf("%d\n", i);
 			break;
 		}
 	}
-	_putchar('\n');
 
 	return (0);
 }
