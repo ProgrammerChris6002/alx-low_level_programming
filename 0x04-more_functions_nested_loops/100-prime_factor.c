@@ -16,7 +16,7 @@ int main(void)
 	{
 		if (is_prime(i) == 1 && num % i == 0)
 		{
-			printf("%d\n", i);
+			printf("%lu\n", i);
 			break;
 		}
 	}
