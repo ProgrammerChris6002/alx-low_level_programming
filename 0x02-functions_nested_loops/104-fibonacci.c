@@ -18,16 +18,19 @@ int main(void)
 	unsigned long int aft2;
 
 	printf("%lu", bef);
+
 	for (i = 1; i < 91; i++)
 	{
 		printf(", %lu", aft);
 		aft += bef;
 		bef = aft - bef;
 	}
+
 	bef1 = (bef / I);
 	bef2 = (bef % I);
 	aft1 = (aft / I);
 	aft2 = (aft % I);
+
 	for (i = 92; i <= 98; i++)
 	{
 		printf(", %lu%lu", aft1 + (aft2 / I), aft2 % I);
@@ -37,5 +40,6 @@ int main(void)
 		bef2 = aft2 - bef2;
 	}
 	printf("\n");
+
 	return (0);
 }
