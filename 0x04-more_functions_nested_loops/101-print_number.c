@@ -7,9 +7,9 @@
 
 void print_number(int n)
 {
+	int n2 = n;
 	int i;
 	int j;
-	int n2 = n;
 	int div = 1;
 	int len = 0;
 
@@ -17,7 +17,7 @@ void print_number(int n)
 	{
 		_putchar(0 + '0');
 		_putchar('\n');
-		return (0);
+		return;
 	}
 
 	while (n2 > 0)
