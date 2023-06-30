@@ -1,24 +1,27 @@
 #include "main.h"
 
 /**
-  * _strcat - concatenates two strings
+  * _strncat - concatenates two strings
   * @dest: first string
   * @src: second string
+  * @n: number of characters from src to be concatenated
   * Return: pointer to @dest
   */
 
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
 	int len1 = 0, len2 = 0;
 
 	while (dest[len1] != '\0')
 		len1++;
-	while (src[len2] != '\0')
+	while (n > 0)
 	{
 		dest[len1] = src[len2];
 		len2++;
 		len1++;
+		n--;
 	}
 
+	_putchar(dest);
 	return (&dest);
 }
