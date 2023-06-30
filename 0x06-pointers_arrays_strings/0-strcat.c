@@ -20,7 +20,7 @@ char *_strcat(char *dest, char *src)
 		for (i = 0; i < len1; i++)
 			if (dest[i] == '\0')
 			{
-				dest[i] = ' ';
+				dest[i] = '\0';
 				break;
 			}
 
@@ -30,6 +30,7 @@ char *_strcat(char *dest, char *src)
 		len2++;
 		len1++;
 	}
+	dest[len1] = '\0';
 
-	return (&dest);
+	return (dest);
 }
