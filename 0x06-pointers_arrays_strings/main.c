@@ -25,7 +25,6 @@ int main(void)
 		len2++;
 		len1++;
 	}
-	dest[len1 + len2] = '\0';
 
 	printf("%s", dest);
 	return (0);
