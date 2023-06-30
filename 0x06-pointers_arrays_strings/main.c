@@ -2,8 +2,6 @@
 
 int main(void)
 {
-	int i;
-	int n = 1;
 	int len1 = 0;
 	int len2 = 0;
 	char dest[] = "Hello ";
