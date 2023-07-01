@@ -2,28 +2,26 @@
 
 int main(void)
 {
-	char s[] = "Holberton!";
-	char scpy[500];
-	int len, i, tmp;
+	char str[] = "Holberton!", str2[500];
+	int i, len = 0, len2;
 
-	len = 0;
-
-	while (s[len] != '\0')
+	while (str[len] != '\0')
 	{
-		printf("%c", s[len]);
-		scpy[len] = s[len];
+		str2[len] = str[len];
 		len++;
 	}
-	printf("%d\n", len);
-	printf("%s\n", scpy);
+	str2[len] = '\0';
+
 	len--;
-
-	for (i = 0; i < len / 3 ; i++)
+	len2 = len;
+	for (i = 0; i <= len2; i++)
 	{
-		tmp = s[i];
-		s[i] = s[len - i - 1];
-		s[len - i - 1] = tmp;
+		str[i] = str2[len];
+		len--;
 	}
+	str[i] = '\0';
 
+	printf("%s\n", str);
+	printf("%s\n", str2);
 	return (0);
 }
