@@ -9,7 +9,6 @@ void print_number(int n)
 {
 	int n2 = n;
 	int i;
-	int j;
 	int div = 1;
 	int len = 0;
 
