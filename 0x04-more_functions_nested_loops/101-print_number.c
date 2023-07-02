@@ -7,31 +7,13 @@
 
 void print_number(int n)
 {
-	int n2 = n;
-	int i;
-	int div = 1;
-	int len = 0;
-
-	if (n == 0)
+	if (n < 0)
 	{
-		_putchar(0 + '0');
-		_putchar('\n');
-		return;
+		_putchar('-');
+		n = -n;
 	}
 
-	while (n2 > 0)
-	{
-		len++;
-		n2 /= 10;
-	}
-	for (i = 1; i < len; i++)
-		div *= 10;
-
-	while (div > 0)
-	{
-		_putchar((n / div) + '0');
-		n %= div;
-		div /= 10;
-	}
-	_putchar('\n');
+	if (n / 10 != 0)
+		print_number(n / 10);
+	_putchar('0' + n % 10);
 }
