@@ -2,8 +2,8 @@
 
 /**
   * _strcat - concatenates two strings
-  * @dest: first string
-  * @src: second string
+  * @dest: first pointer to string
+  * @src: second pointer to string
   * Return: pointer to @dest
   */
 
@@ -23,6 +23,7 @@ char *_strcat(char *dest, char *src)
 		len2++;
 	}
 	*(dest + len1) = '\0';
+	_putchar(dest);
 
 	return (dest);
 }
