@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+/**
+  * main - assigns a value to an array using a pointer
+  * Return: 0
+  */
+
 int main(void)
 {
 	int n;
