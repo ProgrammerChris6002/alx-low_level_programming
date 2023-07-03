@@ -5,15 +5,14 @@
   * @s: memory area
   * @b: constant byte
   * @n: number of bytes
-  * Return: 0
+  * Return: s
   */
 
 char *_memset(char *s, char b, unsigned int n)
 {
-	int i = 0;
-	int n2 = n;
+	unsigned int i = 0;
 
-	while (s[i] != '\0' && i < n2)
+	while (s[i] != '\0' && i < n)
 	{
 		s[i] = b;
 		i++;
