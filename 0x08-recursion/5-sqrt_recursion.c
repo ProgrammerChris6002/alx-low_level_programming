@@ -19,15 +19,16 @@ int _sqrt_recursion(int n)
 /**
   * _sqrt_helper - checks if the square of the current guess is equal to n
   * @n: number to check
+  * @guess: number to be guessed
   * Return: guess
   */
 
 int _sqrt_helper(int n, int guess)
 {
 	if (guess * guess == n)
-		return guess;
+		return (guess);
 	else if (guess * guess > n)
-		return -1;
+		return (-1);
 	else
 		return (_sqrt_helper(n, guess + 1));
 }
