@@ -38,6 +38,12 @@ int main(int argc, char *argv[])
 	return (0);
 }
 
+/**
+  * isNumber - checks if a string is a valid number
+  * @str: string to be checked
+  * Return: Returns 1 is it's an integer, else 0
+  */
+
 int isNumber(const char *str)
 {
 	char *endptr;
