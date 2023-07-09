@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdbool.h>
 
 /**
   * main - adds two numbers
@@ -50,7 +49,7 @@ int isNumber(const char *str)
 
 	strtol(str, &endptr, 10);
 
-	if (endptr == str)
+	if (*endptr != '\0')
 		return (0);
 
 	return (1);
