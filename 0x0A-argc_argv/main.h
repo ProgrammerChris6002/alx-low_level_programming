@@ -6,5 +6,6 @@
 int _putchar(char c);
 
 int isNumber(const char* str);
+void change();
 
 #endif /* MAIN_H */
