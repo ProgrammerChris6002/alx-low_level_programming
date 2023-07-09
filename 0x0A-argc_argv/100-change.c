@@ -19,8 +19,11 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	num2 = atoi(argv[1]);
-	if (atoi(argv[1]) < 0)
+	if (atoi(argv[1]) <= 0)
+	{
 		printf("%d\n", 0);
+		return (0);
+	}
 	while (num2 > 0)
 	{
 		if (num2 >= 25)
