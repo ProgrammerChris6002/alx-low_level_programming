@@ -2,6 +2,7 @@
 
 /**
   * main - This prints the name of a program
+  * @argc: arg count
   * @argv: argument vector param
   * Return: 0
   */
