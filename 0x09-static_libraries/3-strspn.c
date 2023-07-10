@@ -1,29 +1,31 @@
 #include "main.h"
 
 /**
-  * _strspn - gets the length of a prefix substring
-  * @s: string to be checked
-  * @accept: words to be counted
-  * Return: number of bytes in s consisting only of bytes from accept
+  * _strspn - Entry point
+  * @s: input
+  * @accept: input
+  * Return: Always 0 (Success)
   */
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int count = 0;
-	int found = 1;
-	int i = 0;
+	unsigned int n = 0;
+	int r;
 
-	while (*s != '\0' && found)
+	while (*s)
 	{
-		found = 0;
-		for (i = 0; accept[i] != '\0'; i++)
-			if (*s == accept[i])
+		for (r = 0; accept[r]; r++)
+		{
+			if (*s == accept[r])
 			{
-				count++;
-				found = 1;
+				n++;
 				break;
 			}
+			else if (accept[r + 1] == '\0')
+				return (n);
+		}
 		s++;
 	}
-	return (count);
+
+	return (n);
 }
