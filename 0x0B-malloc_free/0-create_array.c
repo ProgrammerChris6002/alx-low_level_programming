@@ -7,14 +7,14 @@
   * Return: pointer to char if all goes well else NULL
   */
 
-char *create_array(unsigned int size, char __attribute((unused)) c)
+char *create_array(unsigned int size, char c)
 {
 	char *ptr;
 
 	if (size == 0)
 		return (NULL);
 
-	ptr = malloc(sizeof(char) * size);
+	ptr = malloc(c);
 
 	if (ptr == NULL)
 		return (NULL);
