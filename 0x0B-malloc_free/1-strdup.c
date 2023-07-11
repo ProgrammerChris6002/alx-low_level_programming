@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+  * _strdup - duplicates a string
+  * @str: string to be duplicated
+  * Return: pointer to mem location of new str if all goes well else NULL
+  */
+
 char *_strdup(char *str)
 {
 	char *array;
@@ -11,8 +17,8 @@ char *_strdup(char *str)
 
 	if (str == NULL)
 		return (NULL);
-	
-	array = (char *) malloc(sizeof(str) * len);
+
+	array = malloc(sizeof(*str) * len);
 	if (array == NULL)
 		return (NULL);
 
