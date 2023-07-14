@@ -8,7 +8,7 @@
 
 void *malloc_checked(unsigned int b)
 {
-	char * array;
+	char *array;
 
 	array = malloc(b);
 	if (array == NULL)
