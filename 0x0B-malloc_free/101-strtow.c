@@ -1,6 +1,27 @@
 #include "main.h"
 
 /**
+  * _strcmp - compares two strings
+  * @s1: first string
+  * @s2: second string
+  * Return: An integer
+  */
+
+int _strcmp(char *s1, char *s2)
+{
+	int len;
+
+	len = 0;
+	while (s1[len] != '\0' && s2[len] != '\0')
+	{
+		if (s1[len] != s2[len])
+			return (s1[len] - s2[len]);
+		len++;
+	}
+	return (0);
+}
+
+/**
   * count_words - helps the strtow function count the number of words in str
   * @str: string that contains word
   * Return: number of words
@@ -39,7 +60,7 @@ char **strtow(char *str)
 
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
-	if (str[0] == ' ' && str[1] == '\0')
+	if (_strcmp(str, " ") != 0)
 		return (NULL);
 
 	rows = count_words(str);
