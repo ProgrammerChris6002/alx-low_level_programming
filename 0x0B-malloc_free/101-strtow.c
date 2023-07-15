@@ -34,14 +34,12 @@ static int count_words(char *str)
 
 char **strtow(char *str)
 {
-	int i = 0, j, len, total_len = 0, rows = 0;
+	int i, j, len, total_len = 0, rows = 0;
 	char **array;
 
-	while (str[i])
-		i++;
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
-	if (str[0] == ' ' && i == 1)
+	if (str[0] == ' ' && str[1] == '\0')
 		return (NULL);
 
 	rows = count_words(str);
