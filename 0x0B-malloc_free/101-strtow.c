@@ -37,9 +37,11 @@ char **strtow(char *str)
 	int i = 0, j, len, total_len = 0, rows = 0;
 	char **array;
 
-	while(str[i])
+	while (str[i])
 		i++;
-	if (str == NULL || i == 0)
+	if (str == NULL || str[0] == '\0')
+		return (NULL);
+	if (str[0] == ' ' && i == 1)
 		return (NULL);
 
 	rows = count_words(str);
