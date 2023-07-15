@@ -34,10 +34,12 @@ static int count_words(char *str)
 
 char **strtow(char *str)
 {
-	int i, j, len, total_len = 0, rows = 0;
+	int i = 0, j, len, total_len = 0, rows = 0;
 	char **array;
 
-	if (str == NULL || str[0] == '\0')
+	while(str[i])
+		i++;
+	if (str == NULL || i == 0)
 		return (NULL);
 
 	rows = count_words(str);
@@ -59,7 +61,7 @@ char **strtow(char *str)
 
 		array[i] = malloc(sizeof(char) * len + 1);
 		if (array[i] == NULL)
-			return(NULL);
+			return (NULL);
 
 		for (j = 0; j < len; j++)
 		{
