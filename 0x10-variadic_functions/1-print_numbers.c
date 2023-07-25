@@ -2,7 +2,7 @@
 
 /**
   * print_numbers - prints numbers followed by a new line
-  * @seperator: string to be printed between numbers
+  * @separator: string to be printed between numbers
   * @n: number of integers to be passed
   */
 
@@ -10,6 +10,9 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list args;
 	unsigned int i, x;
+
+	if (n == 0)
+		exit(100);
 
 	va_start(args, n);
 
