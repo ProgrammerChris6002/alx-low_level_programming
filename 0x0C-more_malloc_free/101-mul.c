@@ -67,7 +67,7 @@ void multiply(char *num1, char *num2)
 	int len2 = str_len(num2);
 	int len_res = len1 + len2;
 	int i, j, carry, product;
-	int *result;
+	int *result, skip_zeros = 1;
 
 	result = malloc(sizeof(int) * len_res);
 	if (!result)
@@ -92,7 +92,12 @@ void multiply(char *num1, char *num2)
 	}
 
 	for (i = 0; i < len_res - 1; i++)
-		printf("%d", result[i]);
+	{
+		if (result[i] != 0)
+			skip_zeros = 0;
+		if (!skip_zeros)
+			printf("%d", result[i]);
+	}
 	printf("%d\n", result[i]);
 
 	free(result);
