@@ -7,10 +7,10 @@
   * Return: Always 0
   */
 
-int main(int agrc, char *argv[])
+int main_opcodes(int argc, char *argv[])
 {
 	int num_bytes, i;
-	unsigned char *main_ptr = (unsigned char* )main;
+	unsigned char *main_ptr = (unsigned char* )main_opcodes;
 
 	if (argc != 2)
 	{
