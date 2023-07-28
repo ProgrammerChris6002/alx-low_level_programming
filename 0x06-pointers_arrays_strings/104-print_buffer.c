@@ -29,14 +29,18 @@ void print_buffer(char *b, int size)
 			else
 				printf(" ");
 			if (i % 2)
+			{
 				printf(" ");
+			}
 		}
 		for (i = 0; i < j; i++)
 		{
 			int c = *(b + o + i);
 
 			if (c < 32 || c > 132)
+			{
 				c = '.';
+			}
 			printf("%c", c);
 		}
 		printf("\n");
