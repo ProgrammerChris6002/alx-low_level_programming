@@ -1,39 +1,69 @@
 #include "main.h"
 
 /**
- * print_usage_error - Prints usage error message
- * @program_name: Name of the program
+ * error_exit - Prints an error message and exits with a specified code
+ * @code: The exit code
+ * @format: The format string for the error message
+ * @...: Additional arguments for the format
  */
-void print_usage_error(const char *program_name)
+
+void error_exit(int code, const char *format, ...)
 {
-    dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", program_name);
+	va_list args;
+
+	va_start(args, format);
+	dprintf(STDERR_FILENO, "Error: ");
+	vdprintf(STDERR_FILENO, format, args);
+	va_end(args);
+
+	exit(code);
 }
 
 /**
- * print_read_error - Prints read error message
- * @filename: Name of the file
+ * copy_file - Copies the content of one file to another
+ * @src_filename: The source filename
+ * @dest_filename: The destination filename
  */
-void print_read_error(const char *filename)
-{
-    dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
-}
 
-/**
- * print_write_error - Prints write error message
- * @filename: Name of the file
- */
-void print_write_error(const char *filename)
+void copy_file(const char *src_filename, const char *dest_filename)
 {
-    dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
-}
+	int fd_src, fd_dest, bytes_read, bytes_written;
+	char buffer[1024];
 
-/**
- * print_close_error - Prints close error message
- * @fd: File descriptor
- */
-void print_close_error(int fd)
-{
-    dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+	fd_src = open(src_filename, O_RDONLY);
+	if (fd_src == -1)
+		error_exit(98, "Can't read from file %s\n", src_filename);
+
+	fd_dest = open(dest_filename, O_WRONLY | O_CREAT | O_TRUNC, 0644);
+	if (fd_dest == -1)
+	{
+		close(fd_src);
+		error_exit(99, "Can't write to %s\n", dest_filename);
+	}
+
+	while ((bytes_read = read(fd_src, buffer, sizeof(buffer))) > 0)
+	{
+		bytes_written = write(fd_dest, buffer, bytes_read);
+		if (bytes_written == -1 || bytes_written != bytes_read)
+		{
+			close(fd_src);
+			close(fd_dest);
+			error_exit(99, "Can't write to %s\n", dest_filename);
+		}
+	}
+
+	if (bytes_read == -1)
+	{
+		close(fd_src);
+		close(fd_dest);
+		error_exit(98, "Can't read from file %s\n", src_filename);
+	}
+
+	if (close(fd_src) == -1)
+		error_exit(100, "Can't close fd %d\n", fd_src);
+
+	if (close(fd_dest) == -1)
+		error_exit(100, "Can't close fd %d\n", fd_dest);
 }
 
 /**
@@ -43,64 +73,14 @@ void print_close_error(int fd)
  *
  * Return: 0 on success, or the specified error codes on failure
  */
+
 int main(int argc, char *argv[])
 {
-    int fd_from, fd_to, bytes_read, bytes_written;
-    char buffer[1024];
+	if (argc != 3)
+		error_exit(97, "Usage: %s file_from file_to\n", argv[0]);
 
-    if (argc != 3)
-    {
-        print_usage_error(argv[0]);
-        return (EXIT_FAILURE);
-    }
+	copy_file(argv[1], argv[2]);
 
-    fd_from = open(argv[1], O_RDONLY);
-    if (fd_from == -1)
-    {
-        print_read_error(argv[1]);
-        return (EXIT_FAILURE);
-    }
-
-    fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0644);
-    if (fd_to == -1)
-    {
-        print_write_error(argv[2]);
-        close(fd_from);
-        return (EXIT_FAILURE);
-    }
-
-    while ((bytes_read = read(fd_from, buffer, sizeof(buffer))) > 0)
-    {
-        bytes_written = write(fd_to, buffer, bytes_read);
-        if (bytes_written == -1 || bytes_written != bytes_read)
-        {
-            print_write_error(argv[2]);
-            close(fd_from);
-            close(fd_to);
-            return (EXIT_FAILURE);
-        }
-    }
-
-    if (bytes_read == -1)
-    {
-        print_read_error(argv[1]);
-        close(fd_from);
-        close(fd_to);
-        return (EXIT_FAILURE);
-    }
-
-    if (close(fd_from) == -1)
-    {
-        print_close_error(fd_from);
-        close(fd_to);
-        return (EXIT_FAILURE);
-    }
-
-    if (close(fd_to) == -1)
-    {
-        print_close_error(fd_to);
-        return (EXIT_FAILURE);
-    }
-
-    return (EXIT_SUCCESS);
+	return (EXIT_SUCCESS);
 }
+
