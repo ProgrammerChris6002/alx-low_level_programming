@@ -14,6 +14,9 @@ void print_usage_error(const char *program_name);
 void print_read_error(const char *filename);
 void print_write_error(const char *filename);
 void print_close_error(int fd);
+
 int main(int argc, char *argv[]);
+char *create_buffer(char *file);
+void close_file(int fd);
 
 #endif
